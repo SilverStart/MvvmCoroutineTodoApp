@@ -11,10 +11,7 @@ import javax.inject.Inject
 @AndroidEntryPoint
 class TodoAddActivity : AppCompatActivity() {
 
-    @Inject
-    lateinit var factory: ViewModelProvider.Factory
-
-    private val viewModel by viewModels<TodoAddScreenViewModel> { factory }
+    private val viewModel by viewModels<TodoAddScreenViewModel>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
